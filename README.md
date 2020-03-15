@@ -29,8 +29,29 @@ const Display = () => {
             <button onClick={() => setCounter(current => current - 1)}>Decrement</button>
         </div>
     );
-};
+}
 
 export default Display;
 
+```
+
+### useMatchMedia
+---
+
+This hook will inform you when any given breakpoint is matched using the `window.matchMedia`.
+
+Example of use:
+
+```js
+import { useMatchMedia } from './hooks/';
+
+const Display = () => {
+  const matched = useMatchMedia([368, 768]);
+
+  return (
+    <div>
+      Matched breakpoint: {matched}
+    </div>
+  );
+}
 ```
